@@ -7,7 +7,7 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/scheme: internet-facing 
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:505773699493:certificate/d2421721-3e7a-4cea-b901-00fc29d141b7
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:451017115109:certificate/2fb88971-122f-4bf3-9b3a-f44e95bae1c1
     alb.ingress.kubernetes.io/ssl-redirect: '443'
 spec:
   # tls:
@@ -15,7 +15,7 @@ spec:
   #       - www.frodo.kr
   #     secretName: tls-crt 
   rules:
-  - host: www.frodo.kr
+  - host: {{.Values.ingress.host}}
     http:
       paths:
       - pathType: Prefix

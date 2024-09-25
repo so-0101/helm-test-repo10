@@ -8,6 +8,9 @@ wasImage:
   tag: v1
   pullPolicy: IfNotPresent
 
+ingress:
+  host: www.so-cute.shop
+
 service:
   type: ClusterIP
   port: 80
